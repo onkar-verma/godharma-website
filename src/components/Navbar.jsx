@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const toggleNavbar = () => setIsOpen((prev) => !prev);
 
-  /* ================= Scroll Shrink Only ================= */
+  /* ================= Scroll Shrink ================= */
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -55,7 +55,7 @@ const Navbar = () => {
           <motion.div
             animate={{ scale: isScrolled ? 1.1 : 1 }}
             transition={{ duration: 0.3 }}
-            className={`${isScrolled ? "w-14 h-14" : "w-10 h-10"}
+            className={`${isScrolled ? "w-12 h-12" : "w-10 h-10"}
             rounded-full flex items-center justify-center`}
           >
             <img src={Logo} alt="Logo" className="w-12 h-12" />
