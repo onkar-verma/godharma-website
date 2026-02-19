@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { FaLinkedinIn, FaXTwitter, FaGithub } from "react-icons/fa6";
+import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
+import Founder from "../assets/founder.jpg";
 
 /* ================= ANIMATION CONFIG ================= */
 
@@ -220,7 +221,7 @@ const About = () => {
             >
               <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden">
                 <img
-                  src="/founder.jpg"
+                  src={Founder}
                   alt="Founder of GoDharma"
                   className="w-full h-full object-cover"
                 />
@@ -250,22 +251,38 @@ const About = () => {
 
               <div className="mt-6 flex justify-center lg:justify-start gap-4">
                 {[
-                  { icon: FaLinkedinIn, hoverBg: "hover:bg-[#0A66C2]" },
-                  { icon: FaXTwitter, hoverBg: "hover:bg-black" },
-                  { icon: FaGithub, hoverBg: "hover:bg-[#181717]" },
-                ].map(({ icon: Icon, hoverBg }, i) => (
+                  {
+                    icon: FaLinkedinIn,
+                    url: "https://linkedin.com/in/onkarverma",
+                    hoverBg: "hover:bg-[#0A66C2]",
+                  },
+                  {
+                    icon: FaInstagram,
+                    url: "https://instagram.com/unsaidonkar",
+                    hoverBg: "hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600",
+                  },
+                  {
+                    icon: FaGithub,
+                    url: "https://github.com/onkar-verma",
+                    hoverBg: "hover:bg-[#181717]",
+                  },
+                ].map(({ icon: Icon, url, hoverBg }, i) => (
                   <motion.a
                     key={i}
-                    href="#"
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -4 }}
                     whileTap={{ scale: 0.95 }}
                     className={`w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center
-                    text-gray-700 transition duration-200 hover:text-white ${hoverBg}`}
+      text-gray-700 transition duration-200 hover:text-white ${hoverBg}`}
                   >
                     <Icon size={18} />
                   </motion.a>
                 ))}
               </div>
+
+
 
             </motion.div>
 
