@@ -54,7 +54,7 @@ const CallToAction = () => {
         {/* Buttons */}
         <motion.div
           variants={item}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-8"
         >
           
           {/* Primary CTA */}
