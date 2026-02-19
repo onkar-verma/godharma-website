@@ -51,14 +51,14 @@ const Navbar = () => {
         transition-all duration-300`}
       >
         {/* Logo */}
-        <div className="flex items-center overflow-hidden">
+        <div className="flex items-center">
           <motion.div
             animate={{ scale: isScrolled ? 1.1 : 1 }}
             transition={{ duration: 0.3 }}
-            className={`${isScrolled ? "w-12 h-12" : "w-10 h-10"}
+            className={`${isScrolled ? "w-8 h-8" : "w-10 h-10"}
             rounded-full flex items-center justify-center`}
           >
-            <img src={Logo} alt="Logo" className="w-12 h-12" />
+            <img src={Logo} alt="Logo" className="w-full h-full object-contain" />
           </motion.div>
 
           <motion.span
